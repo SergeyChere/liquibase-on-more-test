@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+    <changeSet id="1" author="sergii"></changeSet>
+
+    <changeSet id="2" author="sergii">
+        <createTable tableName="orders">
+
+            <column name="ID" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="ORDER_TRANSIT_STATUS" type="INT">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="ORDER_PAYMENT_STATUS" type="INT">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="ORDER_STATUS" type="INT">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="CREATED_ON" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="UPDATED_ON" type="DATETIME">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
