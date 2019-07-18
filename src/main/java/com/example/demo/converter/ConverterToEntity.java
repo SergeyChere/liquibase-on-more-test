@@ -10,12 +10,9 @@ public class ConverterToEntity {
 
     public Order convertToEntity(OrderRequest orderRequest) {
         return Order.builder()
-                .orderTransitStatus(OrderStatus.getByName(orderRequest.getName()))
-                .orderTransitStatus(OrderStatus.getById(orderRequest.getId()))
-                .orderPaymentStatus(OrderStatus.getByName(orderRequest.getName()))
-                .orderPaymentStatus(OrderStatus.getById(orderRequest.getId()))
-                .orderStatus(OrderStatus.getByName(orderRequest.getName()))
-                .orderStatus(OrderStatus.getById(orderRequest.getId()))
+                .orderTransitStatus(OrderStatus.getById(orderRequest.getOrderTransitStatus()))
+                .orderPaymentStatus(OrderStatus.getById(orderRequest.getOrderPaymentStatus()))
+                .orderStatus(OrderStatus.getById(orderRequest.getOrderStatus()))
                 .build();
     }
 }

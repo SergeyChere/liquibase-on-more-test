@@ -9,6 +9,7 @@ import lombok.*;
 @Builder
 public class OrderRequest {
 
-    private String name;
-    private Integer id;
+    private Integer orderTransitStatus;
+    private Integer orderPaymentStatus;
+    private Integer orderStatus;
 }
